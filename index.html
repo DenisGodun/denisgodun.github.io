@@ -121,26 +121,6 @@ function handleTouchMove(evt) {
     } else {
         if ( yDiff > 0 ) {
             //alert("up");
-          if(map[posY+1][posX] == 2) {
-          //alert("yes");
-          
-          wall.fillStyle = "#FEFEFE";//белий
-          wall.fillRect(posX*32, posY*32 , 32, 32); 
-          
-          wall.fillStyle = "#63E2AF";//зелений
-          wall.fillRect((posX)*32, (posY+1)*32 , 32, 32);
-          
-          map[posY][posX] = 2;
-          map[posY+1][posX] = 3;
-          posY = posY+1;
-          
-        } else if(map[posY+1][posX] == 4) {
-          alert("You win!");  
-        }
-          
-          
-        } else { 
-           // alert("down");
           if(map[posY-1][posX] == 2) {
           //alert("yes");
           
@@ -155,6 +135,25 @@ function handleTouchMove(evt) {
           posY = posY-1;
           
         } else if(map[posY-1][posX] == 4) {
+          alert("You win!");  
+        }
+          
+        } else { 
+           // alert("down");
+          if(map[posY+1][posX] == 2) {
+          //alert("yes");
+          
+          wall.fillStyle = "#FEFEFE";//белий
+          wall.fillRect(posX*32, posY*32 , 32, 32); 
+          
+          wall.fillStyle = "#63E2AF";//зелений
+          wall.fillRect((posX)*32, (posY+1)*32 , 32, 32);
+          
+          map[posY][posX] = 2;
+          map[posY+1][posX] = 3;
+          posY = posY+1;
+          
+        } else if(map[posY+1][posX] == 4) {
           alert("You win!");  
         }
         }                                                                 
