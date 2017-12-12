@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objects</title>
+</head>
+<body>
+  <center>
+    <canvas id="scene" style="border: 1px solid #a089ff;">Not found</canvas>
+  </center>  
+  <script>
+    var scene = document.getElementById("scene");
+    
+    scene.width = 400;
+    scene.height = 700;
+    
+    /*==============Стена. id: 1================*/
+    var wall = scene.getContext("2d");
+    var id = 1;
+    wall.fillStyle = "#85ABC6";//синий
+    wall.fillRect(1, 0 , 32, 32);
+    
+    var wallText = scene.getContext("2d");
+    wallText.font = "18px serif";
+    wallText.fillText("Стена. id: 1", 32+5, 23);
+    
+    /*==============Проход. id: 2================*/
+    var road = scene.getContext("2d");
+    var id = 2;
+    road.fillStyle = "#9d9898";//серий
+    road.fillRect(1, (id-1)*(32+5), 32, 32);
+    
+    var roadText = scene.getContext("2d");
+    roadText.font = "18px serif";
+    roadText.fillText("Проход. id: 2", 32+5, ((id-1)*(32+5))+23 );
+    
+    /*==============Игрок. id: 3================*/
+    var player = scene.getContext("2d");
+    var id = 3;
+    player.fillStyle = "#63E2AF";//зелений
+    player.fillRect(1, (id-1)*(32+5), 32, 32);
+    
+    var playerText = scene.getContext("2d");
+    playerText.font = "18px serif";
+    playerText.fillText("Игрок. id: 3", 32+5, ((id-1)*(32+5))+23 );
+    
+    /*==============Финиш. id: 4================*/
+    var finish = scene.getContext("2d");
+    var id = 4;
+    finish.fillStyle = "#81E7BE";//зелений финиш
+    finish.fillRect(1, (id-1)*(32+5), 32, 32);
+    
+    var finishText = scene.getContext("2d");
+    finishText.font = "18px serif";
+    finishText.fillText("Финиш. id: 4", 32+5, ((id-1)*(32+5))+23 );
+    
+    
+    /*==============Блок все сторони. id: 5================*/
+    var id = 5;
+    function drawBlockAll(x,y) {
+      wall.fillStyle = "#5CD3EE";//блок напрвления
+      wall.fillRect(x, y, 32, 32); 
+      
+      wall.fillStyle = "#85ABC6";//линии направления
+      wall.fillRect(x, y, 32, 32/6);//вверх 
+      wall.fillRect(x, y, 32/6, 32);//лево
+      wall.fillRect(x+32-(32/6), y, 32/6, 32);//право
+      wall.fillRect(x, y+32-(32/6), 32, 32/6);//низ
+    }
+    drawBlockAll(1, (id-1)*(32+5));
+
+    var finishText = scene.getContext("2d");
+    finishText.font = "18px serif";
+    finishText.fillText("Блок все сторони. id: 5", 32+5, ((id-1)*(32+5))+23 );
+    
+    /*==============Нажимная плита. id: 12================*/
+    // eng - pressure plate
+    var id = 12;
+    function drawPlate(x,y) {
+      wall.fillStyle = "#5CD3EE";//блок плиты
+      wall.fillRect(x, y, 32, 32); 
+      
+      wall.fillStyle = "#85ABC6";//линии направления
+      wall.fillRect(x+5, y+5, 32-15, 32/7);//вверх 
+      wall.fillRect(x+5, y+5, 32/7, 32-15);//лево
+      wall.fillRect(x+32-10, y+5, 32/7, 32-10);//право
+      wall.fillRect(x+5, y+32-10, 32-15, 32/7);//низ
+    }
+    drawPlate(1, (id-1)*(32+5));
+
+    var finishText = scene.getContext("2d");
+    finishText.font = "18px serif";
+    finishText.fillText("Нажимная плита. id: 12", 32+5, ((id-1)*(32+5))+23 );
+    
+  </script>
+</body>
+</html>     

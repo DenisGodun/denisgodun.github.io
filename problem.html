@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Problem</title>
+</head>
+<body>
+  <center> <canvas id="game"></canvas> </center>
+  
+  <script>
+  var game = document.getElementById("game"); 
+  var wall = game.getContext("2d"),
+      blockAll = game.getContext("2d"); 
+    
+    var imgBlockAll = new Image();
+    imgBlockAll.src = "data:image/png;base6;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABNSURBVFhH7dcxEQAgDEPRgpoiFDX4wAJ1A0sXBHBh+Fma8d1lauljbhOm5pVFDrgmWO7Z3qZFZGMCAAAAAAAAAAAAAAAAfADgORUDzA490Qwdw/hUtwAAAABJRU5ErkJggg==";
+    
+    var map = [
+      [1,1,1],
+      [1,2,1],
+      [1,1,1]
+    ];
+    
+    game.width = 320;
+    game.height = 320;
+    
+    for(var y = 0; y < 3; y++) {
+      for(var x = 0; x < 3; x++) {
+        if(map[y][x] == 1) {
+          wall.fillStyle = "#2076b4";//синий
+          wall.fillRect(x*32, y*32 , 32, 32);      
+        } else if(map[y][x] == 2) {
+          imgBlockAll.onload = function() { 
+            alert(x);
+            blockAll.drawImage(imgBlockAll, 4*32, 4*32); 
+          }
+        }  
+      }  
+    }
+  
+  </script>
+</body>
+</html>
