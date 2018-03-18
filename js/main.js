@@ -1,8 +1,19 @@
-var menuBlock = document.getElementById("menu");
+var menuBlock = document.getElementById("menu"),
+    video = document.getElementById("video");
 
 var isScrolling = false;
 
 window.addEventListener("scroll", throttleScroll, false);
+video.addEventListener('ended',videoEnd,false);
+
+window.scrollTo(0,0);
+document.body.style.overflow = 'hidden';
+
+function videoEnd(e) {
+  //alert ("end");
+  document.body.style.overflow = 'auto';
+  smoothScroll('menu-choose');
+}
 
  
 function throttleScroll(e) {
@@ -16,7 +27,7 @@ function throttleScroll(e) {
 }   
  
 function dealWithScrolling(e) {
-  if(window.scrollY >= (window.screen.height-226)) {
+  if(window.scrollY >= ((window.screen.height*2)-226)) {
     menuBlock.style.display = "block";   
   } else {
     menuBlock.style.display = "none";     

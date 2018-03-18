@@ -481,3 +481,14 @@ h1 {
 .none {
   display: none;
 }
+
+.video-block {
+  background: url(../img/backgrounds/bad.png) top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}

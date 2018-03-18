@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <section>
+  <section id="blockVideo">
    <header id="menu" class="position-fixed width100 none">
      <nav class="nav-menu flex flex-direction-row justify-content-end">
        <figure class="margin-right-auto">
@@ -39,7 +39,12 @@
        </figure>
      </nav>
    </header>
-    <section class="width-100 height-100 section-index flex align-items-center align-content-center justify-content-center flex-direction-column">
+    <section class="video-block width-100 height-100 flex align-items-center align-content-center justify-content-space-around">
+      <video id="video" poster="img/previewVideo/MarvelLogo.svg" autoplay="autoplay" controls="controls" tabindex="0">
+        <source src="video/marvel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      </video>
+    </section>
+    <section id="menu-choose" class="width-100 height-100 section-index flex align-items-center align-content-center justify-content-center flex-direction-column">
       <!--<figure class="">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1000px" height="402.473px" viewBox="-215.19 -86.608 1000 402.473" enable-background="new -215.19 -86.608 1000 402.473"
