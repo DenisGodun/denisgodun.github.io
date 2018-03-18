@@ -1,42 +1,26 @@
+var menuBlock = document.getElementById("menu");
 
-var video = document.getElementById ("video"),
-    sound = document.getElementById ("sound"),
-    soundPanel = document.getElementById ("soundPanel"),
-    btnList = document.getElementById ("btn-list");
+var isScrolling = false;
 
-var soundStatus = true;
+window.addEventListener("scroll", throttleScroll, false);
 
-document.body.style.overflow = 'hidden';
-
-
-video.addEventListener('ended',videoEnd,false);
-
-video.play();
-
-function videoEnd(e) {
-  //alert ("end");
-  sound.play();
-  soundPanel.style.display = "block";
-  
-  document.body.style.overflow = 'auto';
-  btnList.style.display = "block";
-}
-
-function checkSound () {
-  if (soundStatus) {
-    sound.pause();
-    soundStatus = false;
-    soundPanel.innerHTML = "Включить звук";
+ 
+function throttleScroll(e) {
+    if (isScrolling == false ) {
+        window.requestAnimationFrame(function() {
+          dealWithScrolling(e);
+          isScrolling = false;
+        });
+    }
+    isScrolling = true;
+}   
+ 
+function dealWithScrolling(e) {
+  if(window.scrollY >= (window.screen.height-226)) {
+    menuBlock.style.display = "block";   
   } else {
-    sound.play();
-    soundStatus = true;
-    soundPanel.innerHTML = "Выключить звук";
+    menuBlock.style.display = "none";     
   }
-}
-
-function moveToList () {
- document.body.style.overflow = 'auto';
-  smoothScroll('content');
 }
 
 // Функция скролинга с интернета
