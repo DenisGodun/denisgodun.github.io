@@ -7,7 +7,7 @@ window.addEventListener("scroll", throttleScroll, false);
 video.addEventListener('ended',videoEnd,false);
 
 window.scrollTo(0,0);
-document.body.style.overflow = 'hidden';
+//document.body.style.overflow = 'hidden';
 
 function videoEnd(e) {
   //alert ("end");
