@@ -34,7 +34,72 @@
 
 .display-action {
   width: 100%;
-  height: 90%;
-  background: url(../images/castleV2.png) no-repeat;
+  height: 100vh;
+  background: url(../images/castleV2.png) no-repeat, url(../images/back.png) bottom ;
   background-size: contain;
+}
+
+.clicked-zone {
+  position: absolute;
+  background-color: rgba(255, 127, 80, 0.21);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.bottom {
+  position: absolute;
+  top: 510px;
+  left: 11%;
+  width: 80%;
+}
+
+.inventory {
+  height: 72px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: url(../images/back.png);
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.inventory-slot {
+  width: 68px;
+  height: 68px;
+  background-color: #1a3c31;
+  cursor: pointer;
+}
+
+.act {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.inv-img {
+  width: 64px;
+  height: 64px;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.level-1 {
+  background: url(../images/inv/arrow.png) no-repeat;
+}
+
+.level-2 {
+  background: url(../images/inv/sword.png) no-repeat;
+}
+
+.level-3 {
+  background: url(../images/inv/axe.png) no-repeat;
+}
+
+.level-4 {
+  background: url(../images/inv/hammer.png) no-repeat;
 }
