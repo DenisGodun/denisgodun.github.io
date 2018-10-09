@@ -9,22 +9,52 @@
 <body>
 <div id="wrapper" class="wrapper flex flex-align-items-start justify-content-center">
   <div class="display relative">
-    <div class="display-action relative">
+    <div id="display-start" class="display-start relative flex justify-content-center align-items-center">
+      <div class="pointer" onClick="start();">
+        <span class="big-text">НАЧАТЬ ИГРУ</span>
+      </div>  
+    </div>
+    
+    <div id="display-game-over" class="none display-game-over relative flex flex-direction-column justify-content-center align-items-center">
+      <div class="pointer">
+        <span class="big-text">Вы победили!</span>
+      </div> 
+      <div class="pointer" onClick="toMainScene();">
+        <span class="big-text">На главную</span>
+      </div>  
+    </div>
+   
+    <div id="display-action" class="display-action relative none">
+      <div class="coins flex justify-content-center">
+        <img style="height: 48px;" src="images/inv/crown.png" alt="">
+        <span class="coins-text">$ <span id="money">100</span></span>
+      </div>
+      <div class="healht flex justify-content-center">
+        <div class="health-panel">
+          <div id="panelHealth" style=""></div>  
+        </div>  
+      </div>
+      <div id="damageInfo" class="damage-i absolute none">
+        <div class="damageInfo damageInfo-1">
+          <img src="images/inv/swords.png" alt="">
+          <span id="textDamage" class="spanInfo"></span>
+        </div>  
+      </div>
       <img id="wall" class="bottom" src="images/wall.png" alt="">
-      <!--<div class="clicked-zone"></div> --> 
+      <div class="clicked-zone" onClick="clickCastle();"></div>
       <div class="inventory flex flex-row justify-content-space-around">
         
-        <div class="inventory-slot">
-          <div class="inv-img level-1"><span class="act">10$</span></div>  
+        <div id="slot1" class="inventory-slot checked" onClick='checkWeapon(1);'>
+          <div class="inv-img level-1"><span id="invMoney1" class="act"></span></div>  
         </div>
-        <div class="inventory-slot">
-          <div class="inv-img level-2"><span class="act">50$</span></div>  
+        <div id="slot2" class="inventory-slot" onClick='checkWeapon(2);'>
+          <div class="inv-img level-2"><span id="invMoney2" class="act">50$</span></div>  
         </div>
-        <div class="inventory-slot">
-          <div class="inv-img level-3"><span class="act">150$</span></div>  
+        <div id="slot3" class="inventory-slot" onClick='checkWeapon(3);'>
+          <div class="inv-img level-3"><span id="invMoney3" class="act">150$</span></div>  
         </div>
-        <div class="inventory-slot">
-          <div class="inv-img level-4"><span class="act">500$</span></div>  
+        <div id="slot4" class="inventory-slot" onClick='checkWeapon(4);'>
+          <div class="inv-img level-4"><span id="invMoney4" class="act">500$</span></div>  
         </div>
 
         
