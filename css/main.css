@@ -89,25 +89,7 @@ body {
 }
 /* About end */
 
-/* Small devices (landscape phones, 576px and up)*/
-@media screen (max-width: 576px) { 
 
-}
-
-/* Medium devices (tablets, 768px and up)*/
-@media screen (min-width: 576px) and (max-width: 768px) { 
-
-}
-
-/* Large devices (desktops, 992px and up)*/
-@media screen (min-width: 992px) { 
-}
-
-/* Extra large devices (large desktops, 1200px and up)*/
-@media screen (min-width: 1200px) { 
-}
-
-/* Media end */
 
 
 .price {
@@ -167,3 +149,39 @@ body {
 .img-parnters {
   border: 2px solid #006981;
 }
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media only screen and (max-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media only screen and (max-width: 768px) { 
+
+.price button {
+  margin: 20px 40px;
+  font-size: 20px;
+}
+
+.about button{
+  font-size: 24px;
+}
+
+
+.partners-logo{
+  font-size: 35px;
+}
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media only screen and (max-width: 992px) { 
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media only screen and (max-width: 1200px) { 
+}
+
+/* Media end */
