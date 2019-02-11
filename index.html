@@ -1,69 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>DestroyME!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-<div id="wrapper" class="wrapper flex flex-align-items-start justify-content-center">
-  <div class="display relative">
-    <div id="display-start" class="display-start relative flex justify-content-center align-items-center">
-      <div class="pointer" onClick="start();">
-        <span class="big-text">НАЧАТЬ ИГРУ</span>
-      </div>  
-    </div>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <div id="display-game-over" class="none display-game-over relative flex flex-direction-column justify-content-center align-items-center">
-      <div class="pointer">
-        <span class="big-text">Вы победили!</span>
-      </div> 
-      <div class="pointer" onClick="toMainScene();">
-        <span class="big-text">На главную</span>
-      </div>  
-    </div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css"> 
    
-    <div id="display-action" class="display-action relative none">
-      <div class="coins flex justify-content-center">
-        <img style="height: 48px;" src="images/inv/crown.png" alt="">
-        <span class="coins-text">$ <span id="money">100</span></span>
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="wrapper container ">
+      <nav class="navbar navbar-expand-lg ">
+        <span class="navbar-brand" href="#">ТЕПЛОРЕМОНТ</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav mr-4">
+            <li class="nav-item">
+              <a class="nav-link" data-value="about" href="#">Информация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-value="partners" href="#">Наши партнеры</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-value="price" href="#">Цены</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-value="contacts" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="row about" id="about">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <img src="images/Layer-3.png" class="rounded mx-auto d-block">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 desc">
+          <h3>
+          Ремонт и обслуживание <br>
+          газовых котлов, колонок <br>
+          и електро нагревателей <br>
+          </h3>
+          <p class="text-orange">Ремонтируем любые модели</p>
+          <button class="btn btn-outline-secondary">оставить заявку</button>
+          <p>
+          *запчасти есть почты к любой технике, только под заказ
+          </p>
+        </div>
       </div>
-      <div class="healht flex justify-content-center">
-        <div class="health-panel">
-          <div id="panelHealth" style=""></div>  
-        </div>  
+      <div class="price" id="price">
+        <div class="h4 text-center">Цены</div>
+        <div class="row ">
+         
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12 text-rigth">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <h5>Чистка газового котла Т/О</h5>
+                <p class="text-price">
+                  - с промывкой всех узлов котла спецраствором
+                </p>
+                <p class="money-price">Цена: 1100 грн.</p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <button class="btn btn-outline-secondary">оставить заявку</button>  
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
-      <div id="damageInfo" class="damage-i absolute none">
-        <div class="damageInfo damageInfo-1">
-          <img src="images/inv/swords.png" alt="">
-          <span id="textDamage" class="spanInfo"></span>
-        </div>  
-      </div>
-      <img id="wall" class="bottom" src="images/wall.png" alt="">
-      <div class="clicked-zone" onClick="clickCastle();"></div>
-      <div class="inventory flex flex-row justify-content-space-around">
-        
-        <div id="slot1" class="inventory-slot checked" onClick='checkWeapon(1);'>
-          <div class="inv-img level-1"><span id="invMoney1" class="act"></span></div>  
-        </div>
-        <div id="slot2" class="inventory-slot" onClick='checkWeapon(2);'>
-          <div class="inv-img level-2"><span id="invMoney2" class="act">50$</span></div>  
-        </div>
-        <div id="slot3" class="inventory-slot" onClick='checkWeapon(3);'>
-          <div class="inv-img level-3"><span id="invMoney3" class="act">150$</span></div>  
-        </div>
-        <div id="slot4" class="inventory-slot" onClick='checkWeapon(4);'>
-          <div class="inv-img level-4"><span id="invMoney4" class="act">500$</span></div>  
-        </div>
+		<div class="partners margin-bottom-5" id="partners">
+          <div class="h4 text-center">Наши партнеры</div>
+          <div class="row text-center margin-bottom-5">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="margin-bottom-5"><span class="partners-logo">Termaxi</span></div>
+              <p class="partners-bold">Водонагреватели и газовые колонки</p>
+              <p class="partners-p">скидка 10% по промо коду (1008)</p>
+            </div>    
+            <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="margin-bottom-5"><span class="partners-logo red">Piramida24</span></div>
+              <p class="partners-bold">Любые запчасти на газовые котлы</p>
+              <p class="partners-p">скидка 5-10% при заказе через нас</p>
+            </div>    
+          </div>
+          <div class="row text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <p class="red-text">
+              Акция в весенний-летний период 20% на Т/О. 
+              И больше картинок с маркали котлов.</p>
+            </div> 
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <img src="images/Layer-4.png" alt="" class="img-fluid img-parnters">
+            </div> 
+          </div>
+		</div>
+		<div class="contacts margin-bottom-5" id="contacts">
+		  <div class="h4 text-center">Контакты</div>
+		  <div class="row ">
+		  <div class="col-lg-6 col-md-6 col-sm-12 text-right">
+		    <p>+380 (063) 668-06-60</p>
+		  </div>
+		  <div class="col-lg-6 col-md-6 col-sm-12 text-left">
+		    <p>+380 (099) 000-54-87</p>
+		  </div>
+		  </div>
+		  <div class="text-center">
+		    <p class="partners-bold">
+		    Борисполь и Бориспольский район
+		    </p>
+		    <p>
+		    без выходных и праздников звонки до 20:00 <br>
+		    <span class="partners-p">недорого быстро качественно и с гарантией.</span>
+		    </p>
+		  </div>
+		</div>
+	</div>
 
-        
-      </div>
-    </div>  
-  </div>  
-</div>
-  
-  
-<script src="js/game.js"></script>  
-</body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    !-- Optional JavaScript -->
+    <script src="js/main.js"></script>  
+  </body>
 </html>
