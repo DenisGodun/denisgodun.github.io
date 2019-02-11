@@ -89,9 +89,6 @@ body {
 }
 /* About end */
 
-
-
-
 .price {
   margin: 3em 0;
   
@@ -126,13 +123,9 @@ body {
   margin-bottom: 1rem;
 }
 
-
-
 .partners-p {
  font-weight: 300;
 }
-
-
 
 .partners-bold {
   font-weight: 700;
@@ -150,29 +143,38 @@ body {
   border: 2px solid #006981;
 }
 
+.small-center-r {
+  text-align: right;
+}
 
+.small-center-l {
+  text-align: left;
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) { 
 
 }
 
-/* Medium devices (tablets, 768px and up)*/
+/* Medium devices (tablets, 768px and down)*/
 @media only screen and (max-width: 768px) { 
 
-.price button {
-  margin: 20px 40px;
-  font-size: 20px;
-}
+  .price button {
+    margin: 20px 40px;
+    font-size: 20px;
+  }
 
-.about button{
-  font-size: 24px;
-}
+  .about button{
+    font-size: 24px;
+  }
 
+  .partners-logo{
+    font-size: 35px;
+  }
 
-.partners-logo{
-  font-size: 35px;
-}
+  .small-center-r,.small-center-l {
+    text-align: center;
+  }
 
 }
 
@@ -185,3 +187,4 @@ body {
 }
 
 /* Media end */
+

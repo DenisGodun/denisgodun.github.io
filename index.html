@@ -15,7 +15,7 @@
   <body>
     <div class="container ">
       <nav class="navbar navbar-expand-lg ">
-        <span class="navbar-brand" href="#">ТЕПЛОРЕМОНТ</span>
+        <span class="navbar-brand" href="#"><i class="fas fa-wrench"></i> ТЕПЛОРЕМОНТ</span>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""><i class="fas fa-bars"></i></span>
         </button>
@@ -47,7 +47,8 @@
           и електро нагревателей <br>
           </h3>
           <p class="text-orange">Ремонтируем любые модели</p>
-          <button class="btn btn-outline-secondary">Оставить заявку</button>
+          <!--<button class="btn btn-outline-secondary">Оставить заявку</button>-->
+          <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>
           <p>
           *запчасти есть почты к любой технике, только под заказ
           </p>
@@ -67,7 +68,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -97,7 +98,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -112,7 +113,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -127,7 +128,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -142,7 +143,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -157,7 +158,7 @@
                 <p class="money-price">Цена: 1100 грн.</p>
               </div>
               <div class="col-lg-4 col-md-4 col-sm-12">
-                <button class="btn btn-outline-secondary">Оставить заявку</button>  
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="usluga1">Оставить заявку</button>  
               </div>
             </div>
           </div>
@@ -192,10 +193,10 @@
 		<div class="contacts margin-bottom-5" id="contacts">
 		  <div class="h4 text-center">Контакты</div>
 		  <div class="row ">
-		  <div class="col-lg-6 col-md-6 col-sm-6 text-right">
+		  <div class="col-lg-6 col-md-6 col-sm-6  small-center-r">
 		    <p>+380 (063) 668-06-60</p>
 		  </div>
-		  <div class="col-lg-6 col-md-6 col-sm-6 text-left">
+		  <div class="col-lg-6 col-md-6 col-sm-6 small-center-l">
 		    <p>+380 (099) 000-54-87</p>
 		  </div>
 		  </div>
@@ -211,6 +212,41 @@
 		    </p>
 		  </div>
 		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Оставить заявку</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="client-name" class="col-form-label">Ваше имя:</label>
+                    <input type="text" class="form-control" id="client-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="client-number" class="col-form-label">Номер телефона:</label>
+                    <input type="text" class="form-control" id="client-number">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Ваше сообщение:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- Modal end -->
 	</div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
