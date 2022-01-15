@@ -42,6 +42,7 @@ let startShowText = () => {
       select.disabled = false;
       clearInterval(intervalUpdateText);
       console.log('index END');
+      status = "notStarted";
     }
     //console.log(`Index _${resTextArray[currentIndex]}`);
     textValue.innerHTML = `${resTextArray[currentIndex]}`;
